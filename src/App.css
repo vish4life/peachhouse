@@ -1,0 +1,11 @@
+.App {
+  text-align: justify;
+}
+#footer{
+  text-align:center; 
+}
+#header{
+  background-color: #97D2FE;
+  width: 100vw;
+  height: 10vh;
+}
