@@ -5,7 +5,7 @@ function Header(){
     return (
         <header id="header">
             <div id="headBlock">
-                <img id="headerImage" src={brand} alt="Logo of Peach House"/>
+                <a href="/home"><img id="headerImage" src={brand} alt="Logo of Peach House"/></a>
                 <Nav />
             </div>
         </header>

@@ -2,11 +2,11 @@ function Nav(){
     return(
         <nav id="nav">
             <ul className="nav-bar">
-                <li><a href="/Home">Home</a></li>
-                <li><a href="/Menu">Menu</a></li>
-                <li><a href="/Order">Order</a></li>
-                <li><a href="/Reserve">Reserve</a></li>
-                <li><a href="/Contact">Contact</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/menu">Menu</a></li>
+                <li><a href="/order">Order</a></li>
+                <li><a href="/reserve">Reserve</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     );

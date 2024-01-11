@@ -34,7 +34,7 @@
 
 .nav-bar{
   list-style-type: none;
-  display: flex;
+  display: inline-flex;
   background-color: #f3f168;
 }
 .nav-bar a{
@@ -45,7 +45,12 @@
   margin: 0 3vw;
   border-radius: 8px;
   color:white;
-  font-family: cursive;
+  font-family:'comic sans Ms';
+}
+.nav-bar a:hover{
+  background-color: rgb(248, 151, 99);
+  color:rgb(14, 14, 0);
+  border-radius: 15px;
 }
 #main{
   grid-area: main;
