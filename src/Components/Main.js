@@ -1,6 +1,6 @@
 function Main(){
     return(
-        <div>Main Section</div>
+        <main id="main">Main Section</main>
     );
 }
 export default Main;

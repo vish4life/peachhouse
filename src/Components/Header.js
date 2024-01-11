@@ -1,10 +1,13 @@
+import brand from '../Images/yellowBrand.jpg';
 import Nav from './Nav';
-import brand from '../Images/purpleBrand.png';
+
 function Header(){
     return (
-        <header >
-            <img src={brand} alt="Logo of Peach House"/>
-            <Nav />
+        <header id="header">
+            <div id="headBlock">
+                <img id="headerImage" src={brand} alt="Logo of Peach House"/>
+                <Nav />
+            </div>
         </header>
     );
 }
