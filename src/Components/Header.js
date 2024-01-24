@@ -1,14 +1,12 @@
-import brand from '../Images/yellowBrand.jpg';
-import Nav from './Nav';
+// Importing Images
+import brand from '../Images/logos/logo3.png';
 
-function Header(){
+function Header() {
     return (
-        <header id="header">
-            <div id="headBlock">
-                <a href="/home"><img id="headerImage" src={brand} alt="Logo of Peach House"/></a>
-                <Nav />
-            </div>
-        </header>
+        <div id="headSection">
+            <a href="/"><img id="headerImage" src={brand} alt="Logo of the Peach House" /></a>
+            <h1>PEACH HOUSE</h1>
+        </div>
     );
 }
 export default Header;

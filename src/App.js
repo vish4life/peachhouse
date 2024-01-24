@@ -1,16 +1,67 @@
+// Importing Style Sheets
 import './App.css';
+
+// Importing Components
 import Header from './Components/Header';
-import Main from './Components/Main';
 import Footer from './Components/Footer';
+import Home from './Components/Homepage';
+import Menu from './Components/Menupage';
+import Order from './Components/Orderpage';
+import Reserve from './Components/Reservepage';
+import Peach from './Components/Peach';
 
+//Importing Images
+import Cart from './Images/logos/cart.png'
+
+// Importing React functions, userhooks etc.
+import { Routes, Route, Link } from 'react-router-dom';
+
+const cartFunc =()=>{(
+  alert("Cart is Empty")
+);};
 function App() {
-  return (
-    <div id="app">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className='app'>
+            <header id="header">
+                <Header />
+                <nav id="nav">
+                    <ul>
+                        <li className='navList'>
+                            <Link to="/" className='navLink'>Home</Link>
+                        </li>
+                        <li className='navList'>
+                            <Link to="/menu" className='navLink'>Menu</Link>
+                        </li>
+                        <li className='navList'>
+                            <Link to="/order" className='navLink'>Order</Link>
+                        </li>
+                        <li className='navList'>
+                            <Link to="/reserve" className='navLink'>Reserve</Link>
+                        </li>
+                        <li className='navList'>
+                            <Link to="/aboutpeach" className='navLink'>Peach</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="cartIcon">
+                <button id="cartBtn" onClick={cartFunc}>
+                    <img id="cartImage" src={Cart} alt="Cart" />
+                </button>
+            </div>
+            <main id="main">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/menu" element={<Menu />} />
+                    <Route path="/order" element={<Order />} />
+                    <Route path="/reserve" element={<Reserve />} />
+                    <Route path="/aboutpeach" element={<Peach />} />
+                </Routes>
+            </main>
+            <footer id="footer">
+                <Footer />
+            </footer>
+        </div>
+    );
 }
-
 export default App;

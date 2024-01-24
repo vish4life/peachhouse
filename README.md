@@ -1,5 +1,8 @@
 # Peach House
-This project is a personal exercise as part of Coursera module
+Peach house is a personal project for improving react skills.
+
+## Tech Stack
+HTML, CSS, React Js
 
 ## Available Scripts
 In the project directory (src), you can run:
