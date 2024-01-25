@@ -1,27 +1,31 @@
-import { orderList } from './Data/OrderList';
-
+import { useState } from 'react';
+import { MenuList } from './Data/MenuList';
+// import Update from './UpdateCart.js';
 function Orderpage() {
+    const [isDisabled,setIsDisabled] = useState(false);
+    const testFunc = () => {
+        alert("testing add to cart button");
+        setIsDisabled(true);
+    }
     return (
-        <section className="pageSection" id="order">
+        <section className="pageSection">
             <div className="orderSection">
                 <div className="orderList">
-                    {orderList.map((order) => (
+                    {MenuList.map((order) => (
                         <div className="orderItem" key={order.id}>
-                            <div className="items">
-                                <h1>{order.title}</h1><br />
-                                <img src={order.getImageSrc()} alt={order.title} />
+                            <h1>{order.heading}</h1><br/><hr/><br/>
+                            {order.body.map((menu)=>(
+                                <div className='items_container' key={menu.id}>
+                                <div className="items">
+                                <h3>{menu.title}</h3><br />
+                                <img src={menu.getImageSrc()} alt={menu.title} />
+                                <h4>{menu.price}</h4><br/>
                             </div><br />
-                            <div id="addCart">
-                                <div className='addRemItems'>
-                                    <button className="addCartBtn">&#8861;</button>&nbsp;
-                                </div>
-                                <div className='addRemItems'>
-                                    <input id="displayItems" type="text" placeholder='0' />&nbsp;
-                                </div>
-                                <div className='addRemItems'>
-                                    <button className="addCartBtn">&oplus;</button>
-                                </div>
+                            
                             </div>
+                            ))}
+                            {/* <Update id={order.id}/> */}
+                            <button className='addToCartBtn'  onClick={testFunc} disabled = {isDisabled}>Add to Cart</button>
                         </div>
                     ))}
                 </div>

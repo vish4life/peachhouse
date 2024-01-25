@@ -4,13 +4,13 @@ function Menupage() {
         <section className="pageSection" id="menu">
             <h1>Menu</h1><br />
             {menuList.map((menu) => (
-                <div className="menuSection">
-                    <div className='menuHeading' key={menu.id}>
+                <div className="menuSection" key={menu.id}>
+                    <div className='menuHeading' >
                         {menu.heading}
                     </div><br />
                     {menu.body.map((menuItems) => (
                         <div className='menuItems' key={menuItems.id}>
-                            <div className='menuTitle'>{menuItems.title}</div>
+                            <div className='menuTitle'>{menuItems.title}<p id="menuDescription">{menuItems.description}</p></div>
                             <div className='menuLine'> -------------</div>
                             <div className='menuPrice'> {menuItems.price}</div><br />
                         </div>

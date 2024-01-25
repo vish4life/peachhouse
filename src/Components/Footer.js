@@ -53,7 +53,7 @@ function Footer() {
                 </div>
             </div>
             <div><p id="hours">Working Hours<br />Mon-Fri:1000hrs - 2359hrs<br />Sat-Sun:1000hrs - 0200hrs</p></div>
-            <p>2024 • &copy;Lakshmi Shashank Ch</p>
+            <p id="copyRightSection">&copy;Lakshmi Shashank Ch 2024 • All rights reserved</p>
         </section>
     );
 }
