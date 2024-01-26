@@ -116,10 +116,23 @@ body{
 }
 .addCartBtn{
     cursor: pointer;
-    background:transparent;
-    border:none;
+    margin-bottom:2vw;
+    font-size:1vw;
+    padding:10px;
+    background-color: rgba(255, 192, 203, 0.83);
+    border-radius: 1.5vw;
+    color:black;
+    font-family: 'Play','Comic Sans Ms', sans-serif;
 }
-
+.addCartBtn:hover{
+    background-color: purple;
+    color:white;
+}
+.addCartBtn:disabled{
+    color:black;
+    background-color: rgb(187, 187, 187);
+    cursor:default;
+}
 #cartIcon{
     align-self: flex-end;
     margin-bottom: 1vw;
@@ -170,7 +183,7 @@ body{
 .peachContent_heading{
     display: flex;
     margin-bottom:2vw;
-    font-size:20px;
+    font-size:2vw;
     color:white;
     font-weight: bold;
     font-style: italic;
@@ -214,6 +227,9 @@ body{
     }
     #linkName,#linkInfo{
         font-size:10px;
+    }
+    .addCartBtn{
+        font-size:2.5vw;
     }
 }
 

@@ -1,12 +1,13 @@
-import { useState } from 'react';
+// import { useState } from 'react';
+import AddCart from './AddCart';
 import { MenuList } from './Data/MenuList';
 // import Update from './UpdateCart.js';
 function Orderpage() {
-    const [isDisabled,setIsDisabled] = useState(false);
-    const testFunc = () => {
-        alert("testing add to cart button");
-        setIsDisabled(true);
-    }
+    // const [isItemAdded,setIsItemAdded] = useState({selected:false,code:"",value:""});
+    // const testFunc = (e,code,value) => {
+    //     alert("selected: "+value.value+" "+code.code);
+    //     setIsItemAdded(isItemAdded.selected({e}));
+    // }
     return (
         <section className="pageSection">
             <div className="orderSection">
@@ -20,12 +21,13 @@ function Orderpage() {
                                 <h3>{menu.title}</h3><br />
                                 <img src={menu.getImageSrc()} alt={menu.title} />
                                 <h4>{menu.price}</h4><br/>
-                            </div><br />
-                            
+                            </div>
+                            {/* <button className='addToCartBtn'  onClick={testFunc(true,menu.id,menu.title)} disabled = {isItemAdded.selected}>Add to Cart</button> */}
+                            <AddCart id={menu.id} dish={menu.title} charge={menu.price}></AddCart>
                             </div>
                             ))}
                             {/* <Update id={order.id}/> */}
-                            <button className='addToCartBtn'  onClick={testFunc} disabled = {isDisabled}>Add to Cart</button>
+                            
                         </div>
                     ))}
                 </div>
