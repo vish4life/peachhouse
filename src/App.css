@@ -159,7 +159,8 @@ body{
 }
 .menuHeading{
     text-align: center;
-    background-color: coral;
+    /* background-color: coral; */
+    background: linear-gradient(to right,pink,salmon,pink);
     font-size: 20px;
     font-weight: bolder;
     color:white;
@@ -176,32 +177,38 @@ body{
 }
 
 .peachHeading{
-    margin-bottom:3vw;
-    font-size:30px;
-    text-shadow: 2px 2px gray;
+    margin:3vw;
+    font-size:55px;
+    color:white;
+    text-shadow:1px 1px coral;
 }
 .peachContent_heading{
     display: flex;
     margin-bottom:2vw;
-    font-size:2vw;
+    font-size:50px;
     color:white;
     font-weight: bold;
     font-style: italic;
-    background:linear-gradient(to right,salmon,coral,maroon,black);
-    height:3vw;
+    /* background:linear-gradient(to right,salmon,coral,maroon,black); */
+    background:linear-gradient(to right,pink,salmon,pink);
+    height:8vw;
     text-align: center;
     /* width:fit-content; */
     letter-spacing: 3px;
     align-items: center;
     justify-content: center;
+    text-shadow:2px 2px purple;
 }
 .peachContent_body{
-    margin-bottom:2vw;
+    color:white;
+    font-size:25px;
+    margin-bottom:8vw;
     line-height: 200%;
-    padding:10px;
-    background:linear-gradient(aliceblue,lavender,pink);
-    text-shadow:2px 2px white;
+    padding:30px;
+    /* background:linear-gradient(aliceblue,lavender,pink); */
+    text-shadow:2px 2px purple;
 }
+
 
 /* mobile specific styles */
 @media screen and (min-width:10px) and (max-width:767px){
@@ -231,6 +238,38 @@ body{
     .addCartBtn{
         font-size:2.5vw;
     }
+    .peachHeading{
+        margin:3vw;
+        font-size:20px;
+        text-shadow: 1px 1px coral;
+        color:white;
+    }
+    .peachContent_heading{
+        display: flex;
+        margin-bottom:2vw;
+        font-size:18px;
+        color:white;
+        font-weight: bold;
+        font-style: italic;
+        /* background:linear-gradient(to right,salmon,coral,maroon,black); */
+        background:linear-gradient(to right,pink,salmon,pink);
+        height:12vw;
+        text-align: center;
+        /* width:fit-content; */
+        letter-spacing: 3px;
+        align-items: center;
+        justify-content: center;
+    }
+    .peachContent_body{
+        color:white;
+        font-size:18px;
+        margin-bottom:8vw;
+        line-height: 200%;
+        padding:10px;
+        /* background:linear-gradient(aliceblue,lavender,pink); */
+        text-shadow:1px 1px coral;
+    }
+    
 }
 
 /* non-mobile specific styles */
@@ -258,6 +297,7 @@ body{
 /* .overlay{
     
 } */
+
 .overlay_bg{
     width:100vw;
     height:100vh;
@@ -266,7 +306,7 @@ body{
     top:0;
     left:0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index:1;
+    z-index:9998;
     cursor: pointer;
     display:none;
 }
@@ -278,7 +318,7 @@ body{
     bottom:0;
     left:0;
     right:0;
-    z-index:2;
+    z-index:9999;
     margin:0 auto;
     padding:5vw;
     /* width:max-content;
@@ -287,6 +327,130 @@ body{
     height:-moz-fit-content; */
     border-radius: 2vw;
     overflow:scroll;
+}
+.paymentContainer{
+    background-color: white;
+    position: fixed;
+    top:0vw;
+    bottom:0vw;
+    right:0vw;
+    left:0vw;
+    border-radius: 20px;
+    overflow: scroll;
+    border:2px solid white;
+    text-align: center;
+}
+.cartContainer{
+    /* display:flex; */
+    background-color: rgb(255, 127, 80);
+    position:fixed;
+    top:2vw;
+    bottom:2vw;
+    right:2vw;
+    left:2vw;
+    border-radius: 20px;
+    overflow: scroll;
+    
+}
+.cartCloseBtn{
+    cursor:pointer;
+    font-size: 30px;
+    border:none;
+    background-color: transparent;
+    position:fixed;
+    right:5vw;
+    /* margin-bottom:1vw; */
+}
+.cartCloseBtn:after{
+    content:"\00d7";
+    display:inline-block;
+    color:black;
+    font-size: 4vw;
+}
+
+.cartOrderHeading{
+    margin:3vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2vw;
+    /* width:50%; */
+    text-align: center;
+    /* padding:20px; */
+    /* font-size:28px; */
+    color:coral;
+    font-family: 'Rubik Burned', system-ui;
+    text-shadow: 1px 1px rgb(255, 80, 80);
+    letter-spacing: 6px;
+    font-size:20px;
+}
+/* .orderContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+} */
+.orderHeading,.addedItemsList, .addedItemsInfo,.orderFooter{
+    margin-left:1vw;
+    /* padding: 2vw; */
+    /* border:1px solid red; */
+    width: 80vw;
+    display:flex;
+    column-gap: 10px;
+    color:white;
+    font-size:24px;
+    letter-spacing: 2px;
+}
+.footerInfo{
+    margin-top:3vw;
+    text-align: center;
+    /* display: flex; */
+    width: 50vw;
+    /* color:coral; */
+    text-shadow: 2px 2px rgb(241, 84, 255);
+}
+
+.addedItemsInfo{
+    column-gap: 0.2vw;
+}
+.quantBtn{
+    width:30px;
+    height:30px;
+    border-radius: 10px;
+    background:white;
+    border:none;
+    font-size: 20px;
+}
+.quantBtn:hover{
+    background-color: purple;
+    color:white;
+    cursor:pointer;
+}
+#quantView{
+    border:none;
+    background: transparent;
+    text-align: center;
+    width:35px;
+    font-size:20px;
+    /* color:white; */
+}
+.checkOut{
+    text-align: center;
+    margin:4vw;
+    padding:2vw;
+}
+.checkOutBtn,.resetOkay{
+    background-color: white;
+    /* border:none; */
+    border-radius: 10px;
+    width:120px;
+    height:60px;
+    font-size:30px;
+    letter-spacing: 1px;
+    font-family: 'Play','Comic Sans Ms', sans-serif;
+    text-shadow: 2px 2px purple;
+    color:coral;
+}
+.checkOutBtn:hover,.resetOkay:hover{
+    cursor: pointer;
+    color:white;
+    background-color: purple;
 }
 .overlay_controls{
     display:flex;
@@ -346,3 +510,146 @@ body{
     color:ghostwhite;
 }
 
+/* Loading bar CSS with animation */
+.loading-bar-container {
+    margin:1vw;
+    padding:1vw;
+    width: 100%;
+    height: 20px; /* Adjust height as needed */
+    background-color: rgb(255, 255, 255); /* Background color of the loading bar container */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+ .loading-bar {
+    height: 100%;
+    background-color: #00ff66; /* Color of the loading progress */
+    animation: loading-progress 2s linear forwards; /* Animation with duration 2s */
+  }
+  
+  @keyframes loading-progress {
+  from { width: 0; } /* Initial width of 0% */
+  to { width: 100%; } /* Final width of 100% */
+  }
+  .payment{
+    margin:1vw;
+    padding:1vw;
+    color:white;
+    font-size: 25px;
+    letter-spacing: 1px;
+  }
+
+#carouselImages{
+    width: 60vw;
+    height: 30vw;
+    border-radius: 10px;
+    margin:10px;
+}
+.displayImages{
+    text-align: center;
+    background:linear-gradient(to right,white,pink,pink,pink,white);
+    border-radius: 5vw;
+    margin:20px;
+}
+.homeHeader{
+    background-color: rgba(128, 128, 128, 0.692);
+    border-radius: 10px;
+}
+#homeHeaderInfo{
+    font-size: 2.5vw;
+    margin-right: 10px;
+    color:white;
+    text-align: center;
+}
+#carouselHeader{
+    color:white;
+    text-shadow: 2px 2px purple;
+    padding:10px;
+}
+#imageText{
+    color:rgb(98, 99, 101);
+    text-shadow: 1px 1px pink;
+    padding:20px;
+}
+/* .reservePageContainer{
+    display:grid;
+    grid-template-rows: 1fr 1fr;
+}
+.reservationSection{
+    display:flex;
+} */
+.reservePageContainer {
+    margin: 20px;
+  }
+  
+  .reservationHead {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .reservationSection {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .reserveForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="date"],
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .errorMsg {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .reserveButton {
+    /* background-color: #4CAF50;
+    color: white;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; */
+    background-color: white;
+    /* border:none; */
+    border-radius: 5px;
+    padding: 10px 20px;
+    /* width:180px;
+    height:60px; */
+    font-size:30px;
+    letter-spacing: 1px;
+    font-family: 'Play','Comic Sans Ms', sans-serif;
+    text-shadow: 2px 2px purple;
+    color:coral;
+  }
+  
+  .reserveButton:hover {
+    cursor: pointer;
+    color:white;
+    background-color: purple;
+  }
+  .reserveLabels{
+    font-size:25px;
+    letter-spacing: 1px;
+  }
+  .reserveConfirm{
+    margin-bottom:20px;
+    font-size: 16px;
+  }
+  .reserveButton1,.confirmMessage{
+    text-align: center;
+    padding:10px;
+  }

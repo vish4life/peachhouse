@@ -4,7 +4,7 @@ import '../../App.css';
 //     if (code === 'location') { return (<div className='overlay_info'><Loc value={value} /></div>) }
 // };
 const overlayFunc = (onClose, code, value) => {
-    console.log("inside overlayFunc | type: " + code + " | id: " + value);
+    // console.log("inside overlayFunc | type: " + code + " | id: " + value);
     return (
         <>
             <div className="overlay">
@@ -21,7 +21,7 @@ const overlayFunc = (onClose, code, value) => {
     );
 };
 export const Overlay = ({ isOpen, onClose, type, props }) => {
-    console.log(type + " inside main overlay " + isOpen);
+    // console.log(type + " inside main overlay " + isOpen + " checking type " + type.type);
     return (
         <>
             {isOpen ? (overlayFunc(onClose, type, props)) : null}

@@ -15,11 +15,17 @@ import Cart from './Images/logos/cart.png'
 
 // Importing React functions, userhooks etc.
 import { Routes, Route, Link } from 'react-router-dom';
+// import { useState } from 'react';
+import CartDetails from './Components/CartDetails';
+import { useDispatch, useSelector } from 'react-redux';
+import {showCartOrNotFunc} from './Components/Data/Store';
 
-const cartFunc =()=>{(
-  alert("Cart is Empty")
-);};
 function App() {
+    const cartEmptyOrNot = useSelector(state => state.cart.totalCartItems);
+    // const [showCart,setShowCart] = useState(false);
+    const showCart = useSelector(state =>state.cart.showCart);
+    console.log(showCart);
+    const dispatch = useDispatch();
     return (
         <div className='app'>
             <header id="header">
@@ -45,9 +51,19 @@ function App() {
                 </nav>
             </header>
             <div id="cartIcon">
-                <button id="cartBtn" onClick={cartFunc}>
+                <button id="cartBtn" onClick={()=>
+                {
+                    if(cartEmptyOrNot === 0 ){alert("Cart is Empty");console.log(showCart);}
+                    else{
+                        // setShowCart(true);
+                        dispatch(showCartOrNotFunc(true));
+                        // console.log("inside N block after set to true "+ showCart);
+                    }
+                }
+                }>
                     <img id="cartImage" src={Cart} alt="Cart" />
                 </button>
+                {/* {showCart ? <CartDetails /> : null} */}
             </div>
             <main id="main">
                 <Routes>
@@ -57,6 +73,7 @@ function App() {
                     <Route path="/reserve" element={<Reserve />} />
                     <Route path="/aboutpeach" element={<Peach />} />
                 </Routes>
+                {showCart ? <CartDetails /> : null}
             </main>
             <footer id="footer">
                 <Footer />
