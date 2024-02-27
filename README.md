@@ -145,14 +145,23 @@ Detailed Code Processing Logic of every component
 
 > Footer Section:
 > > * Footer section uses `CSS Grid layout` to display
-> >  * Social media 
-> >  * Locations
-> >  * Support
+> >   * Social media 
+> >   * Locations
+> >   * Support
 > > * Social media opens a new tab 
 > > * Locations & Support follow same work flow of calling a custom userhook `overlay` to display the content
-> >  * The `overlay` userhook is like a pop-up window which covers the entire viewport
+> >   * The `overlay` userhook is like a pop-up window which covers the entire viewport
 
 ### Run project
 * In the project directory (src), you can run: `npm start`
 * Runs the app in the development mode.
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## Sample Snippets
+Web Version
+* ![Home Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webhome.jpg)
+* ![Menu Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webmenu.jpg)
+* ![Order Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/weborder.jpg)
+* ![Reserve Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webreserve.jpg)
+* ![Peach Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webpeach.jpg)
+* ![Cart Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webcart.jpg)
