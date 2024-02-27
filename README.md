@@ -152,16 +152,50 @@ Detailed Code Processing Logic of every component
 > > * Locations & Support follow same work flow of calling a custom userhook `overlay` to display the content
 > >   * The `overlay` userhook is like a pop-up window which covers the entire viewport
 
+> Shopping Cart Section:
+> > * Shopping cart is also a display which occupies the view port with following details
+> >   * Total Cart Items 
+> >   * Total Cart Price
+> >   * Items in Cart
+> >   * Increment & Decrement buttons
+> >   * Quantity field
+> > * Pay button is conditionally rendered if minimum quantity of the cart is 1 (`ternary operator`)
+> >   * Onclick event of Pay will display a loading bar built using `useEffect` and `CSS animation (Key Frames)`
+> >   * After the `useEffect` is executed for 2 seconds the page is re-rendered which does the following
+> >     * Increment & Decrement along buttons get disabled
+> >     * Pay button becomes inactive
+> >     * Confirmation button with Okay button appears
+> >     * Okay button onclick event resets the state of the cart using `useDispatch`
+> >   * X button on the top of the screen closes the cart view
+> > * Locations & Support follow same work flow of calling a custom userhook `overlay` to display the content
+> >   * The `overlay` userhook is like a pop-up window which covers the entire viewport
 ### Run project
 * In the project directory (src), you can run: `npm start`
 * Runs the app in the development mode.
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Sample Snippets
-Web Version
+Desktop Web Version
 * ![Home Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webhome.jpg)
 * ![Menu Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webmenu.jpg)
 * ![Order Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/weborder.jpg)
 * ![Reserve Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webreserve.jpg)
 * ![Peach Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webpeach.jpg)
 * ![Cart Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webcart.jpg)
+* ![Pay Load](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webopay.jpg)
+* ![Pay Confirm](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webpaycon.jpg)
+* ![Reserve Page Errors](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webrerror.jpg)
+* ![Reserve Page Date Error](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webrdterror.jpg)
+* ![Reserve Page confirm](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webrcon.jpg)
+* ![Empty Cart](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webcarterror.jpg)
+
+Mobile Web Version
+* ![Home Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobhome.jpeg)
+* ![Menu Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobmenu.jpeg)
+* ![Order Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/moborder.jpeg)
+* ![Reserve Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobreserve.jpeg)
+* ![Peach Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobpeach.jpeg)
+* ![Footer Screen](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobfooter.jpeg)
+* ![Cart Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobcart.jpeg)
+* ![Pay Load](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobpayload.jpeg)
+* ![Pay Confirm](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobpayproc.jpeg)
