@@ -7,6 +7,7 @@ function Reservepage() {
     const [place, setPlace] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
+    const [guests, setGuests] = useState("");
     const [errors, setErrors] = useState({});
     const [callSubmit, setCallSubmit] = useState(false);
     const dte = new Date();
@@ -17,7 +18,8 @@ function Reservepage() {
         today.setHours(0, 0, 0, 0);
         const selectedDate = new Date(date);
         console.log(name.length);
-        if (!name || !date || !time || !place || !phone || !email) {
+        console.log("time is: " + time + "|" + guests + "|" + place);
+        if (!name || !date || time === "" || !place || !phone || !email || guests === "") {
             error.msg = "All the fields are mandatory";
         }
         if (name.length < 3 || name.length > 30) {
@@ -39,21 +41,10 @@ function Reservepage() {
         return Object.keys(error).length === 0;
     }
     const reserveFunc = () => {
-        console.log("CallSubmit: " + callSubmit);
-        if (callSubmit) {
-            if (!validateForm()) {
-                return;
-            }
+        if (!validateForm()) {
+            return;
         }
         setCallSubmit(true);
-
-        // console.log("Inside Reserve Function: " + name);
-        // console.log("Place: " + place);
-        // console.log("Date: " + date);
-        // console.log("Time: " + time);
-        // console.log("Phone: " + phone);
-        // console.log("Email: " + email);
-        // resetFunc();
     }
     const resetFunc = () => {
         setCallSubmit(false);
@@ -64,9 +55,9 @@ function Reservepage() {
         setDate("");
         setPlace("");
         setErrors({});
+        setGuests("");
     }
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = () => {
         reserveFunc();
     }
 
@@ -77,23 +68,24 @@ function Reservepage() {
                 {callSubmit ? (
                     <>
                         <div className="reservationHead">
-                            <h1>Reservation Confirmed</h1><br/>
+                            <h1>Reservation Confirmed</h1><br />
                             <p>Confirmation# {timeStamp}</p>
                         </div>
                         <div className="confirmMessage">
                             <p className="reserveConfirm" id="reserveConfirm">Thank you for choosing "Peach House", {name}.</p>
-                            <p className="reserveConfirm" id="reserveConfirm2">Your reservation at {place} on {date}, {time} HRS is confirmed.</p>
+                            <p className="reserveConfirm" id="reserveConfirm2">Your reservation at {place} on {date}, {time} HRS for {guests} guests is confirmed.</p>
                             <p className="reserveConfirm" id="reserveConfirm3">A confirmation email is sent to {email} and text is sent to {phone}.</p>
                             <div className="reserveButton1">
                                 <button type="button" className="reserveButton" onClick={() => (resetFunc())}>Okay</button>
-                                </div>
+                            </div>
                         </div>
                     </>) : (
                     <>
                         <div className="reservationHead">
                             <h1>Welcome to the Reservation page</h1>
                         </div>
-                        <form className="reserveForm" onSubmit={handleSubmit}>
+                        {/* <form className="reserveForm" onSubmit={handleSubmit}> */}
+                        <div className="reserveForm">
                             <label className="reserveLabels" htmlFor="place">Location</label>
                             <select id="place" value={place} onChange={(e) => setPlace(e.target.value)}>
                                 <option value="" >Select Location</option>
@@ -120,6 +112,15 @@ function Reservepage() {
                                 <option value="2230">2230 HRS</option>
                             </select>
                             {/* <input type="text" id="time" value={time} onChange={(e) => setTime(e.target.value)} /> */}
+                            <label className="reserveLabels" htmlFor="guests">Guests</label>
+                            <select value={guests} id="guest" onChange={(e) => setGuests(e.target.value)}>
+                                <option value="">Select no. of Guests</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                             <label className="reserveLabels" htmlFor="name">Name</label>
                             <input type="text" id="name" placeholder="Enter Your Name" value={name} onChange={(e) => setName(e.target.value)} />
                             {errors.msgN && <div className="errorMsg">{errors.msgN}</div>}
@@ -129,9 +130,10 @@ function Reservepage() {
                             <label className="reserveLabels" htmlFor="email">Email</label>
                             <input type="text" id="email" placeholder="xxx@xxx.xxx" value={email} onChange={(e) => setEmail(e.target.value)} />
                             {errors.msgE && <div className="errorMsg">{errors.msgE}</div>}
-                            <button type="submit" className="reserveButton">Reserve</button>
+                            <button type="submit" className="reserveButton" onClick={() => { handleSubmit() }}>Reserve</button>
                             <button type="submit" className="reserveButton" onClick={() => { resetFunc() }}>Reset</button>
-                        </form>
+                            {/* </form> */}
+                        </div>
                     </>)}
 
                 {errors.msg && <div className="errorMsg">{errors.msg}</div>}

@@ -79,6 +79,12 @@ Building the web application for a renowned restaurant* "`Peach House`"
 > > * reduxjs/toolkit v2.1.0
 > > * react-parallax v3.5.1
 
+> User Hooks
+> > * React: useState, useEffect
+> > * Reduxjs toolkit: useSelector, useDispatch, Provider, configureStore, createSlice `*reducer is part of configureStore`
+> > * React Router: Routes, Route, Link, Browser Router, useNavigate
+> > * Parallax: Parallax
+
 > CSS Styles
 > > * font imports from google fonts
 > > * grid & flex layouts
@@ -88,15 +94,65 @@ Building the web application for a renowned restaurant* "`Peach House`"
 > > > * html element
 > > > * sibiling
 > > * Media (screen size display styling)
-### Flow:
-## Available Scripts
-In the project directory (src), you can run:
-### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Code Flow:
+The website consists of three main components
+> * Head Section
+> > * Logo
+> > * Brand Name
+> > * Navigation Links
+> > * Shopping Cart
+> * Main Section
+> * Foot Section
 
-### `npm test`
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Detailed Code Processing Logic of every component
+> Head Section:
+> > * The Head component loads with Header, which contains brand text on the right and logo image on the left
+> > * Navigation links are built using `react-router-dom` 
+> > * Shopping cart is a button with a cart icon
+> >   * It fetches the cart empty or not flag set in `Store.js` using `reduxJs toolkit` and conditionally launches the `CartDetails.js` component
+
+> > `Note: useSelector is used to fetch the flag and useDispatch is used to set the flag`
+
+> Main Section:
+> > * The Main component renders all the navigational links in the section
+> >  * Home Page:
+> >    * This page contains a text element with information about restaurant and a image section where every image rotates after 5 seconds using `useEffect` hook
+> >    * `useEffect` hook uses the index of current image from the array of images (which are loaded from `Store.js`) and then increments it. It uses `modulus operator` to rotate back to `0th index` of the array after the last image
+> >    * `useState` hook is used to set the current index
+> >    * Image array consists of image source and description
+> > * Menu Page:
+> >    * This page contains static text loaded from a list which holds information about category of dish, dish name, price and brief description with ingridients
+> >    * The list is stored in Data path and fetched using `map method` in react
+> > * Order Page:
+> >    * This page contains all the available dishes with their image, name, price and add to cart button which are loaded from `Store.js`
+> >    * `useSelector` hook allows to access the lists configured in `Store.js` and then renders the details of name, price and image using `map method`
+> >    * Add to cart button is rendered for every map iteration with disable option mapped to `List` value from the store
+> >    * `useDispatch` hook is used to update the shopping cart empty or not flag, button status, total items, total price etc  based on the click event from Add cart button using `reducers` defined in the `Store.js`
+> > * Reserve Page:
+> >    * This page contains a div element which displays following fields
+> >      * Location
+> >      * Date
+> >      * Time
+> >      * Guests
+> >      * Name
+> >      * Phone
+> >      * Email
+> >    * The confirmation message is conditionally rendered after reserve button onclick event is successfully completed 
+> >    * The reserve button onclick event validates fields and displays error
+> >    * `useState` hook is used to set the above elements along with error messages
+> > * Peach Page:
+> >    * This page uses `react-parallax` library to render the content over a background image with parallax effect
+
+> Footer Section:
+> > * Footer section uses `CSS Grid layout` to display
+> >  * Social media 
+> >  * Locations
+> >  * Support
+> > * Social media opens a new tab 
+> > * Locations & Support follow same work flow of calling a custom userhook `overlay` to display the content
+> >  * The `overlay` userhook is like a pop-up window which covers the entire viewport
+
+### Run project
+* In the project directory (src), you can run: `npm start`
+* Runs the app in the development mode.
+* Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
