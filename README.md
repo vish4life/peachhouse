@@ -79,6 +79,10 @@ Building the web application for a renowned restaurant* "`Peach House`"
 > > * reduxjs/toolkit v2.1.0
 > > * react-parallax v3.5.1
 
+> > Testing Libraries
+> > * testing-library/jest-dom v5.17.0
+> > * testing-library/react v13.4.0
+
 > User Hooks
 > > * React: useState, useEffect
 > > * Reduxjs toolkit: useSelector, useDispatch, Provider, configureStore, createSlice `*reducer is part of configureStore`
@@ -174,7 +178,11 @@ Detailed Code Processing Logic of every component
 * Runs the app in the development mode.
 * Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+### Run Test
+* `npm test` or `npm run test` : Launches the test runner in the interactive watch mode
+
 ## Sample Snippets
+### Application
 Desktop Web Version
 * ![Home Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webhome.jpg)
 * ![Menu Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/webmenu.jpg)
@@ -199,3 +207,7 @@ Mobile Web Version
 * ![Cart Page](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobcart.jpeg)
 * ![Pay Load](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobpayload.jpeg)
 * ![Pay Confirm](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/mobpayproc.jpeg)
+
+### Test
+Test run results
+* ![Unit Test Results](https://github.com/vish4life/peachhouse/blob/main/src/Images/readme/unitTestResults.jpg)
