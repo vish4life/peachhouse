@@ -5,6 +5,7 @@
             "title": "Basil Mushroom Salad",
             "description": "Gently Sauted Mushrooms in Basil infused Cuscus",
             "price": "$10.99",
+            "imgPath":"../assets/images/salads/dish1.jpg",
             "category": "Salads"
         },
         {
@@ -12,6 +13,7 @@
             "title": "Beetroot Avocado Salad",
             "description": "Blanched Avocado slices topped with pickled Beets",
             "price": "$12.99",
+            "imgPath":"../assets/images/salads/dish2.jpg",
             "category": "Salads"
         },
         {
@@ -19,6 +21,7 @@
             "title": "Chestnut Potato Salad",
             "description": "Baked Potatoes and Lettuce with fried Chestnuts",
             "price": "$13.99",
+            "imgPath":"../assets/images/salads/dish3.jpg",
             "category": "Salads"
         },
         {
@@ -26,6 +29,7 @@
             "title": "Paneer Butter Masala",
             "description": "Cottage Cheese cubes served in Indian spiced Buttery sauce with Exotic Long grain Jasmine rice",
             "price": "$14.99",
+            "imgPath":"../assets/images/meal/paneer.jpg",
             "category": "PH Specialities"
         },
         {
@@ -33,6 +37,7 @@
             "title": "Peach House Thaali",
             "description": "Peach House special delicay platter with food from all parts of India",
             "price": "$16.99",
+            "imgPath":"../assets/images/meal/pasta1.jpg",
             "category": "PH Specialities"
         },
         {
@@ -40,6 +45,7 @@
             "title": "Impossible Pasta",
             "description": "Gluten free Pasta, Impossibly made from rice and Vegan alfredo sauce",
             "price": "$17.99",
+            "imgPath":"../assets/images/meal/thali1.jpg",
             "category": "PH Specialities"
         },
         {
@@ -47,6 +53,7 @@
             "title": "Macha Berry Mousse",
             "description": "Blue Berry Macha Mousse is the Signature deser of Peach house",
             "price": "$3.99",
+            "imgPath":"../assets/images/deserts/d1.jpg",
             "category": "Desserts"
         },
         {
@@ -54,6 +61,7 @@
             "title": "Basil Seed Pudding",
             "description": "Milk soaked Basil seeds blended in mocha chocalate syrup and topped with Coconut Cream and Raspberries ",
             "price": "$5.99",
+            "imgPath":"../assets/images/deserts/d2.jpg",
             "category": "Desserts"
         },
         {
@@ -61,6 +69,7 @@
             "title": "Oats Crumble Cup",
             "description": "Crumbled Oats blended with Honey and Fig compote, served with Vanilla flavored Vegan Cream",
             "price": "$2.99",
+            "imgPath":"../assets/images/deserts/d3.jpg",
             "category": "Desserts"
         }
     ]
