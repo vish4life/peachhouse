@@ -4,7 +4,7 @@
             "id": "S01",
             "title": "Basil Mushroom Salad",
             "description": "Gently Sauted Mushrooms in Basil infused Cuscus",
-            "price": "$10.99",
+            "price": "10.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/salads/dish1.jpg?raw=true",
             "category": "Salads"
         },
@@ -12,7 +12,7 @@
             "id": "S02",
             "title": "Beetroot Avocado Salad",
             "description": "Blanched Avocado slices topped with pickled Beets",
-            "price": "$12.99",
+            "price": "12.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/salads/dish2.jpg?raw=true",
             "category": "Salads"
         },
@@ -20,7 +20,7 @@
             "id": "S03",
             "title": "Chestnut Potato Salad",
             "description": "Baked Potatoes and Lettuce with fried Chestnuts",
-            "price": "$13.99",
+            "price": "13.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/salads/dish3.jpg?raw=true",
             "category": "Salads"
         },
@@ -28,7 +28,7 @@
             "id": "MC01",
             "title": "Paneer Butter Masala",
             "description": "Cottage Cheese cubes served in Indian spiced Buttery sauce with Exotic Long grain Jasmine rice",
-            "price": "$14.99",
+            "price": "14.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/meal/paneer.jpg?raw=true",
             "category": "PH Specialities"
         },
@@ -36,7 +36,7 @@
             "id": "MC02",
             "title": "Peach House Thaali",
             "description": "Peach House special delicay platter with food from all parts of India",
-            "price": "$16.99",
+            "price": "16.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/meal/pasta1.jpg?raw=true",
             "category": "PH Specialities"
         },
@@ -44,7 +44,7 @@
             "id": "MC03",
             "title": "Impossible Pasta",
             "description": "Gluten free Pasta, Impossibly made from rice and Vegan alfredo sauce",
-            "price": "$17.99",
+            "price": "17.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/meal/thali1.jpg?raw=true",
             "category": "PH Specialities"
         },
@@ -52,7 +52,7 @@
             "id": "DS01",
             "title": "Macha Berry Mousse",
             "description": "Blue Berry Macha Mousse is the Signature deser of Peach house",
-            "price": "$3.99",
+            "price": "3.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/desserts/d1.jpg?raw=true",
             "category": "Desserts"
         },
@@ -60,7 +60,7 @@
             "id": "DS02",
             "title": "Basil Seed Pudding",
             "description": "Milk soaked Basil seeds blended in mocha chocalate syrup and topped with Coconut Cream and Raspberries ",
-            "price": "$5.99",
+            "price": "5.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/desserts/d2.jpg?raw=true",
             "category": "Desserts"
         },
@@ -68,7 +68,7 @@
             "id": "DS03",
             "title": "Oats Crumble Cup",
             "description": "Crumbled Oats blended with Honey and Fig compote, served with Vanilla flavored Vegan Cream",
-            "price": "$2.99",
+            "price": "2.99",
             "imgPath":"https://github.com/vish4life/peachhouse/blob/main/src/assets/images/desserts/d3.jpg?raw=true",
             "category": "Desserts"
         }
