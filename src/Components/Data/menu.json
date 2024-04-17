@@ -1,7 +1,7 @@
 {
     "menu": [
         {
-            "id": "S01",
+            "id": "1",
             "title": "Basil Mushroom Salad",
             "description": "Gently Sauted Mushrooms in Basil infused Cuscus",
             "price": "10.99",
@@ -9,7 +9,7 @@
             "category": "Salads"
         },
         {
-            "id": "S02",
+            "id": "2",
             "title": "Beetroot Avocado Salad",
             "description": "Blanched Avocado slices topped with pickled Beets",
             "price": "12.99",
@@ -17,7 +17,7 @@
             "category": "Salads"
         },
         {
-            "id": "S03",
+            "id": "3",
             "title": "Chestnut Potato Salad",
             "description": "Baked Potatoes and Lettuce with fried Chestnuts",
             "price": "13.99",
@@ -25,7 +25,7 @@
             "category": "Salads"
         },
         {
-            "id": "MC01",
+            "id": "4",
             "title": "Paneer Butter Masala",
             "description": "Cottage Cheese cubes served in Indian spiced Buttery sauce with Exotic Long grain Jasmine rice",
             "price": "14.99",
@@ -33,7 +33,7 @@
             "category": "PH Specialities"
         },
         {
-            "id": "MC02",
+            "id": "5",
             "title": "Peach House Thaali",
             "description": "Peach House special delicay platter with food from all parts of India",
             "price": "16.99",
@@ -41,7 +41,7 @@
             "category": "PH Specialities"
         },
         {
-            "id": "MC03",
+            "id": "6",
             "title": "Impossible Pasta",
             "description": "Gluten free Pasta, Impossibly made from rice and Vegan alfredo sauce",
             "price": "17.99",
@@ -49,7 +49,7 @@
             "category": "PH Specialities"
         },
         {
-            "id": "DS01",
+            "id": "7",
             "title": "Macha Berry Mousse",
             "description": "Blue Berry Macha Mousse is the Signature deser of Peach house",
             "price": "3.99",
@@ -57,7 +57,7 @@
             "category": "Desserts"
         },
         {
-            "id": "DS02",
+            "id": "8",
             "title": "Basil Seed Pudding",
             "description": "Milk soaked Basil seeds blended in mocha chocalate syrup and topped with Coconut Cream and Raspberries ",
             "price": "5.99",
@@ -65,7 +65,7 @@
             "category": "Desserts"
         },
         {
-            "id": "DS03",
+            "id": "9",
             "title": "Oats Crumble Cup",
             "description": "Crumbled Oats blended with Honey and Fig compote, served with Vanilla flavored Vegan Cream",
             "price": "2.99",
